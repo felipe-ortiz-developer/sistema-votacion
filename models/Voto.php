@@ -44,6 +44,26 @@
                 print "Error!: " . $e->getMessage() . "</br>";
             }
         }
+
+        function validarVoto($rut){
+            try {
+                $query = "SELECT * 
+                    FROM voto 
+                    WHERE rut = :rut";
+                $stm = $this->conexion->prepare($query);
+                if ($stm) {
+                    $stm->bindParam(':rut', $rut, PDO::PARAM_STR);
+                    $stm->execute();
+                    $hash = $stm->fetchAll(PDO::FETCH_ASSOC);
+                    return $hash;
+                }else{
+                    echo "Error en la consulta";
+                }
+
+            } catch( PDOExecption $e ) {
+                print "Error!: " . $e->getMessage() . "</br>";
+            }
+        }
     }
 
 ?>

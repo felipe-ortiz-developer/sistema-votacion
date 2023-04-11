@@ -5,8 +5,6 @@
 
     include "../models/Voto.php";
 
-    // var_dump($_POST);
-
     $datos["nombre"] = filter_var( $_POST['nombre'], FILTER_SANITIZE_STRING);
     $datos["alias"] = filter_var( $_POST['alias'], FILTER_SANITIZE_STRING);
     $datos["rut"] = filter_var( $_POST['rut'], FILTER_SANITIZE_STRING);
@@ -27,7 +25,13 @@
     $datos["amigo"] = filter_var($_POST['amigo'], FILTER_VALIDATE_BOOLEAN);
 
     $votoModel = new Voto();
-    $votoModel->crearVoto($datos);
-
+    // Validar que el rut votante no halla votado antes
+    $resultado = $votoModel->validarVoto($datos["rut"]);
+    if( isset($resultado) ){
+        print "Usted ya registro su voto.";
+    }else{
+        print "Voto registrado correctamente.";
+        $votoModel->crearVoto($datos);
+    }
 
 ?>

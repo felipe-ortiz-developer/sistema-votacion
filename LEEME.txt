@@ -1,6 +1,3 @@
-# sistema-votacion
-Prueba tecnica Desis - Sistema de Votación
-
 Instalación: 
     1.- Instalar stack de tecnologias web "WAMP"
         ref: https://www.wampserver.com/en/
@@ -30,4 +27,3 @@ Tecnologías:
     Apache 2.4.54
     MySQL 8.0.31
     PHP 7.4.33
-    JQuery
