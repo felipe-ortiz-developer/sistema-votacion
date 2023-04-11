@@ -1,7 +1,6 @@
-# sistema-votacion
-Prueba tecnica Desis - Sistema de Votación
+## Sistema de Votación - Prueba tecnica Desis ##
 
-Instalación: 
+#### Instalación: #### 
     1. Instalar stack de tecnologias web "WAMP"
         ref: https://www.wampserver.com/en/
     2. Clonar o mover repositorio a la carpeta "C:\wamp64\www"
