@@ -10,9 +10,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de votación</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tituloMagico.css">
+    <link rel="stylesheet" href="css/botonMagico.css">
 </head>
 <body>
-        <h3>FORMULARIO DE VOTACIÓN: </h3>
+        <h1>
+        <span style="--start-color:#007CF0; --end-color:#00DFD8; --content: 'Formulario';">
+            Formulario
+        </span>
+        <span style="--start-color:#7928CA; --end-color:#FF0080; --content: 'De'; --animation:a2;">
+            De
+        </span>
+        <span style="--start-color:#FF4D4D; animation-name:a3; --end-color:#F9CB28; --content: 'Votación'; --animation: a3">
+            Votación
+        </span>
+
+        </h1>
         <table>
             <tr>
                 <td>Nombre y Apellido</td>
@@ -68,7 +81,7 @@
                 </td>
             </tr>
             <tr>
-                <td>Como se enteró de Nosotros</td>
+                <td>Como se enteró de nosotros</td>
                 <td>
                     <label><input type="checkbox" id="cboxWeb"> Web</label>
                     <label><input type="checkbox" id="cboxTV"> TV</label>

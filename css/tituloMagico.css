@@ -1,0 +1,73 @@
+/* Ref: https://www.youtube.com/watch?v=18Hzm7aVzOA&ab_channel=midudev */
+/* Codigo de referencia: https://codi.link/PGgxPgogIDxzcGFuIHN0eWxlPSItLXN0YXJ0LWNvbG9yOiMwMDdDRjA7IC0tZW5kLWNvbG9yOiMwMERGRDg7IC0tY29udGVudDogJ0RldmVsb3AuJzsiPgogICAgRGV2ZWxvcC4KICA8L3NwYW4+CiAgPHNwYW4gc3R5bGU9Ii0tc3RhcnQtY29sb3I6Izc5MjhDQTsgLS1lbmQtY29sb3I6I0ZGMDA4MDsgLS1jb250ZW50OiAnUHJldmlldy4nOyAtLWFuaW1hdGlvbjphMjsiPgogICAgUHJldmlldy4KICA8L3NwYW4+CiAgPHNwYW4gc3R5bGU9Ii0tc3RhcnQtY29sb3I6I0ZGNEQ0RDsgYW5pbWF0aW9uLW5hbWU6YTM7IC0tZW5kLWNvbG9yOiNGOUNCMjg7IC0tY29udGVudDogJ1NoaXAuJzsgLS1hbmltYXRpb246IGEzIj4KICAgIFNoaXAuCiAgPC9zcGFuPgo8L2gxPg==|Ym9keSB7CiAgYmFja2dyb3VuZDogIzAwMDsKICBmb250LWZhbWlseTogc3lzdGVtLXVpOwogIGRpc3BsYXk6IGdyaWQ7CiAgcGxhY2UtY29udGVudDogY2VudGVyOwogIGhlaWdodDogMTAwdmg7Cn0KCmgxIHsKICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgZm9udC1zaXplOiA1cmVtOwogIGZvbnQtd2VpZ2h0OiA4MDA7CiAgbGV0dGVyLXNwYWNpbmc6IC0uMDZlbTsKICBtYXJnaW46IDAgMCAxNnB4Owp9CgpzcGFuIHsKICBjb2xvcjogI2ZmZjsKICBkaXNwbGF5OiBibG9jazsKICBmb250LXNpemU6IDEwMHB4OwogIGxpbmUtaGVpZ2h0OiAxLjE7CiAgcG9zaXRpb246IHJlbGF0aXZlOwp9CgpzcGFuOjpiZWZvcmUgewogIGFuaW1hdGlvbi1uYW1lOiB2YXIoLS1hbmltYXRpb24sIGEpOwogIGFuaW1hdGlvbi1kdXJhdGlvbjogOHM7CiAgYW5pbWF0aW9uLWl0ZXJhdGlvbi1jb3VudDogaW5maW5pdGU7CiAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDkwZGVnLCB2YXIoLS1zdGFydC1jb2xvciksIHZhcigtLWVuZC1jb2xvcikpOwogIC13ZWJraXQtYmFja2dyb3VuZC1jbGlwOiB0ZXh0OwogIC13ZWJraXQtdGV4dC1maWxsLWNvbG9yOiB0cmFuc3BhcmVudDsKICBjb2xvcjogI2ZmZjsKICBmb250LXNpemU6IDEwMHB4OwogIHBvc2l0aW9uOiBhYnNvbHV0ZTsKICBpbnNldDogMDsKICBjb250ZW50OiB2YXIoLS1jb250ZW50KTsKICBvcGFjaXR5OiAxOwp9CgpAa2V5ZnJhbWVzIGEgewoKICAwJSwKICAxNi42NjclLAogIDEwMCUgewogICAgb3BhY2l0eTogMTsKICB9CgogIDMzLjMzMyUsCiAgODMuMzMzJSB7CiAgICBvcGFjaXR5OiAwOwogIH0KfQoKQGtleWZyYW1lcyBhMiB7CgogIDAlLAogIDEwMCUgewogICAgb3BhY2l0eTogMDsKICB9CgogIDMzLjMzMyUsCiAgNTAlIHsKICAgIG9wYWNpdHk6IDE7CiAgfQoKICAxNi42NjclLAogIDY2LjY2NyUgewogICAgb3BhY2l0eTogMDsKICB9Cn0KCkBrZXlmcmFtZXMgYTMgewogIDAlLAogIDUwJSwKICAxMDAlIHsKICAgIG9wYWNpdHk6IDA7CiAgfQoKICA2Ni42NjclLAogIDgzLjMzMyUgewogICAgb3BhY2l0eTogMTsKICB9Cn0=| */
+
+h1 {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: -.06em;
+    margin: 0 0 16px;
+}
+
+span {
+    color: #fff;
+    display: block;
+    font-size: 100px;
+    line-height: 1.1;
+    position: relative;
+}
+
+span::before {
+    animation-name: var(--animation, a);
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    background: linear-gradient(90deg, var(--start-color), var(--end-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff;
+    font-size: 100px;
+    position: absolute;
+    inset: 0;
+    content: var(--content);
+    opacity: 1;
+}
+
+@keyframes a {
+    0%,
+    16.667%,
+    100% {
+        opacity: 1;
+    }
+    33.333%,
+    83.333% {
+        opacity: 0;
+    }
+}
+
+@keyframes a2 {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    33.333%,
+    50% {
+        opacity: 1;
+    }
+    16.667%,
+    66.667% {
+        opacity: 0;
+    }
+}  
+
+@keyframes a3 {
+    0%,
+    50%,
+    100% {
+        opacity: 0;
+    }
+
+    66.667%,
+    83.333% {
+        opacity: 1;
+    }
+}
