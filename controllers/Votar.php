@@ -27,11 +27,12 @@
     $votoModel = new Voto();
     // Validar que el rut votante no halla votado antes
     $resultado = $votoModel->validarVoto($datos["rut"]);
-    if( isset($resultado) ){
+
+    if(isset($resultado[0]) ){
         print "Usted ya registro su voto.";
     }else{
-        print "Voto registrado correctamente.";
         $votoModel->crearVoto($datos);
+        print "Voto registrado correctamente.";
     }
 
 ?>

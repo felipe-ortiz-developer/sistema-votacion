@@ -78,9 +78,11 @@
                 <td><label class="labelError" for="" id="errorCheckboxs"></label></td>
             </tr>
             <tr>
-                <td><button onclick="votar()">
-                    Votar
-                </button></td>
+                <td>
+                    <button class="botonMagico" onclick="votar()">
+                        Votar
+                    </button>
+                </td>
                 <td><label class="labelError" for="" id="errorVoto"></label></td>
                 <td></td>
             </tr>
