@@ -1,4 +1,4 @@
-## Sistema de Votación - Prueba tecnica Desis ##
+## Sistema de Votación ##
 
 #### Instalación: #### 
     1. Instalar stack de tecnologias web "WAMP"
