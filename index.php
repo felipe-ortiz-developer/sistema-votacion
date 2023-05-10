@@ -1,9 +1,10 @@
-<?php 
-    require_once 'controllers/Index.php';
-    $index = new Index();
+<?php
+require_once 'controllers/Index.php';
+$index = new Index();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,101 +13,109 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/tituloMagico.css">
     <link rel="stylesheet" href="css/botonMagico.css">
+    <link rel="stylesheet" href="css/olas.css">
+    <link rel="icon" href="img/votar.png">
 </head>
+
 <body>
-        <h1>
-        <span style="--start-color:#007CF0; --end-color:#00DFD8; --content: 'Formulario';">
+    <h2 style="display:none" class="border">wavy</h2>
+    <h2 style="display:none" class="wave">wavy</h2>
+
+    <h1 class="tituloMagico">
+        <span class="textoMagico" style="--start-color:#007CF0; --end-color:#00DFD8; --content: 'Formulario';">
             Formulario
         </span>
-        <span style="--start-color:#7928CA; --end-color:#FF0080; --content: 'De'; --animation:a2;">
+        <span class="textoMagico" style="--start-color:#7928CA; --end-color:#FF0080; --content: 'De'; --animation:a2;">
             De
         </span>
-        <span style="--start-color:#FF4D4D; animation-name:a3; --end-color:#F9CB28; --content: 'Votación'; --animation: a3">
+        <span class="textoMagico" style="--start-color:#FF4D4D; animation-name:a3; --end-color:#F9CB28; --content: 'Votación'; --animation: a3">
             Votación
         </span>
+    </h1>
+    <table>
+        <tr>
+            <td>Nombre y Apellido</td>
+            <td><input type="text" id="nombre"></td>
+            <td><label class="labelError" for="" id="errorNombre"></label></td>
+        </tr>
+        <tr>
+            <td>Alias</td>
+            <td><input type="text" id="alias"></td>
+            <td><label class="labelError" for="" id="errorAlias"></label></td>
+        </tr>
+        <tr>
+            <td>RUT</td>
+            <td><input type="text" id="rut"></td>
+            <td><label class="labelError" for="" id="errorRut"></label></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="text" id="email"></td>
+            <td><label class="labelError" for="" id="errorEmail"></label></td>
+        </tr>
+        <tr>
+            <td>Región</td>
+            <td>
+                <select name="" id="selectRegion">
+                    <option disabled selected value="">Seleccione una región</option>
+                    <?php
+                    foreach ($index->datos["regiones"] as $region) {
+                        print "<option value='" . $region['id'] . "'>" . $region['nombre'] . "</option>";
+                    }
+                    ?>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Comuna</td>
+            <td>
+                <select name="" id="selectComuna">
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Candidato</td>
+            <td>
+                <select name="" id="selectCandidato">
+                    <option disabled selected value="">Seleccione un candidato</option>
+                    <?php
+                    foreach ($index->datos["candidatos"] as $candidato) {
+                        print "<option value='" . $candidato['id'] . "'>" . $candidato['nombre'] . "</option>";
+                    }
+                    ?>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Como se enteró de nosotros</td>
+            <td>
+                <label><input type="checkbox" id="cboxWeb"> Web</label>
+                <label><input type="checkbox" id="cboxTV"> TV</label>
+                <label><input type="checkbox" id="cboxRS"> Redes sociales</label>
+                <label><input type="checkbox" id="cboxA"> Amigo</label>
+            </td>
+            <td><label class="labelError" for="" id="errorCheckboxs"></label></td>
+        </tr>
+        <tr>
+            <td>
+                <label class="labelError" for="" id="errorVoto"></label>
+            </td>
+        </tr>
+    </table>
 
-        </h1>
-        <table>
-            <tr>
-                <td>Nombre y Apellido</td>
-                <td><input type="text" id="nombre"></td>
-                <td><label class="labelError" for="" id="errorNombre"></label></td>
-            </tr>
-            <tr>
-                <td>Alias</td>
-                <td><input type="text" id="alias"></td>
-                <td><label class="labelError" for="" id="errorAlias"></label></td>
-            </tr>
-            <tr>
-                <td>RUT</td>
-                <td><input type="text" id="rut"></td>
-                <td><label class="labelError" for="" id="errorRut"></label></td>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td><input type="text" id="email"></td>
-                <td><label class="labelError" for="" id="errorEmail"></label></td>
-            </tr>
-            <tr>
-                <td>Región</td>
-                <td>
-                    <select name="" id="selectRegion">
-                        <option disabled selected value="">Seleccione una región</option>
-                        <?php 
-                            foreach ($index->datos["regiones"] as $region ) {
-                                print "<option value='".$region['id']."'>".$region['nombre']."</option>";
-                            }
-                        ?>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>Comuna</td>
-                <td>
-                    <select name="" id="selectComuna">
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>Candidato</td>
-                <td>
-                    <select name="" id="selectCandidato">
-                        <option disabled selected value="">Seleccione un candidato</option>
-                        <?php 
-                            foreach ($index->datos["candidatos"] as $candidato ) {
-                                print "<option value='".$candidato['id']."'>".$candidato['nombre']."</option>";
-                            }
-                        ?>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>Como se enteró de nosotros</td>
-                <td>
-                    <label><input type="checkbox" id="cboxWeb"> Web</label>
-                    <label><input type="checkbox" id="cboxTV"> TV</label>
-                    <label><input type="checkbox" id="cboxRS"> Redes sociales</label>
-                    <label><input type="checkbox" id="cboxA"> Amigo</label>
-                </td>
-                <td><label class="labelError" for="" id="errorCheckboxs"></label></td>
-            </tr>
-            <tr>
-                <td>
-                    <button class="botonMagico" onclick="votar()">
-                        Votar
-                    </button>
-                </td>
-                <td><label class="labelError" for="" id="errorVoto"></label></td>
-                <td></td>
-            </tr>
-        </table>
+    <div style="text-align:center; margin-top: 30px">
+        <button class="botonMagico" onclick="votar()">
+            Votar
+        </button>
+    </div>
 
     <script src="js/jquery-3.6.4.min.js"></script>
     <script src="js/jquery.rut.js"></script>
+    <script src="js/sweetAlert.js"></script>
 
     <script>
         let comunas = <?php print json_encode($index->datos["comunas"]); ?>;
-        
+
         $(function() {
             $('#selectRegion').on('change', function() {
                 let comunas_region = comunas.filter(comuna => comuna.region_id == this.value);
@@ -134,41 +143,44 @@
 
             // Validación de RUT
             $("input#rut")
-                .rut({formatOn: 'keyup', validateOn: 'keyup'})
-                .on('rutInvalido', function(){ 
+                .rut({
+                    formatOn: 'keyup',
+                    validateOn: 'keyup'
+                })
+                .on('rutInvalido', function() {
                     // console.log("Invalido");
                     $('#errorRut').text("* RUT invalido");
                 })
-                .on('rutValido', function(){ 
+                .on('rutValido', function() {
                     // console.log("Valido");
                     $('#errorRut').text("");
                 });
-            
+
         });
 
-        function votar(){
+        function votar() {
             // Validacion de nombre no vacio
             if ($('#nombre').val() == '') {
                 $('#errorNombre').text("* Este campo es requerido");
                 return;
-            }else{
+            } else {
                 $('#errorNombre').text("");
             }
 
             // Validacion de alias bebe tener mas de 5 caracteres
-            if($("#alias").val().length < 6){
+            if ($("#alias").val().length < 6) {
                 $('#errorAlias').text("* Este campo debe tener mas de 5 caracteres");
                 return;
-            }else{
+            } else {
                 $('#errorAlias').text("");
             }
 
             // Validar correo
-            if($("#email").val().indexOf('@', 0) == -1 || $("#email").val().indexOf('.', 0) == -1) {
+            if ($("#email").val().indexOf('@', 0) == -1 || $("#email").val().indexOf('.', 0) == -1) {
                 // alert('El correo electrónico introducido no es correcto.');
                 $('#errorEmail').text("* Email es invalido");
                 return;
-            }else{
+            } else {
                 $('#errorEmail').text("");
             }
 
@@ -178,14 +190,14 @@
                 contador++;
                 // alert($(this).val());
             });
-            if(contador < 2) {
+            if (contador < 2) {
                 $('#errorCheckboxs').text("* Debe haber por lo menos 2 checkbox marcados");
                 return;
-            }else{
+            } else {
                 $('#errorCheckboxs').text("");
             }
-            
-            let miForm = { 
+
+            let miForm = {
                 nombre: $('#nombre').val(),
                 alias: $('#alias').val(),
                 rut: $('#rut').val(),
@@ -198,17 +210,24 @@
                 rs: $('#cboxRS').is(':checked'),
                 amigo: $('#cboxA').is(':checked'),
             };
-            
-            $.ajax({  
-                type:"POST",  
-                url:"./controllers/Votar.php",  
-                data: miForm,  
-                success: function(data) {
-                    alert(data);
-                }
-            });   
-        }
 
+            $.ajax({
+                type: "POST",
+                url: "./controllers/Votar.php",
+                data: miForm,
+                success: function(data) {
+                    // alert(data);
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: data,
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
+            });
+        }
     </script>
 </body>
+
 </html>
