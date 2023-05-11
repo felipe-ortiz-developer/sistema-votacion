@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="js/datatables.min.css" rel="stylesheet"/>
+    <title>Listar votos</title>
+    <link href="css/datatables.min.css" rel="stylesheet"/>
+    <link href="css/boostrap/bootstrap.min.css" rel="stylesheet"/>
 </head>
 <body>
     <table id="myDataTable">
@@ -27,6 +28,7 @@
     
     <script src="js/jquery-3.6.4.min.js"></script>
     <script src="js/datatables.min.js"></script>
+    <script src="js/boostrap/bootstrap.min.js"></script>
     <script>
         $(function() {
             var data = [

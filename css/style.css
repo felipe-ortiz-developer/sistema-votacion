@@ -4,9 +4,25 @@ body {
     display: grid;
     place-content: center;
     height: 100vh;
-    color: white;
+    color: black;
 }
 
 .labelError {
     color: red;
+}
+
+.jumbotron {
+    background-color: white;
+}
+
+.row {
+    margin: 0px 0px 10px 10px;
+}
+
+.columna{
+    font-weight: bold;
+}
+
+.labelCheck {
+    margin-right: 11px;
 }

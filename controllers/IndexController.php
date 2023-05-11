@@ -9,8 +9,9 @@
     
     class Index {
         public $datos;
-        protected $regionModel;
-        protected $comunaModel;
+        private $regionModel;
+        private $comunaModel;
+        private $candidatoModel;
 
         function __construct(){
             $this->regionModel = new Region();
