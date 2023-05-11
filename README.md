@@ -1,5 +1,7 @@
 ## Sistema de Votación ##
 
+![imagen](https://github.com/felipe-ortiz-developer/sistema-votacion/assets/32887258/67895ed0-8ebd-4c94-b588-bda75cfe73e0)
+
 #### Instalación: #### 
     1. Instalar stack de tecnologias web "WAMP"
         ref: https://www.wampserver.com/en/
