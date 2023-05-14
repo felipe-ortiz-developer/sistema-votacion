@@ -7,7 +7,13 @@
             parent::__construct();
         }
 
-        function crearVoto($datos){
+        function listar(){
+            $stm = $this->conexion->query("SELECT * FROM voto");
+            $votos = $stm->fetchAll(PDO::FETCH_ASSOC);
+            return $votos;
+        }
+
+        function crear($datos){
             try {
                 $stmt = $this->conexion->prepare("
                     INSERT INTO voto (
@@ -45,7 +51,7 @@
             }
         }
 
-        function validarVoto($rut){
+        function validar($rut){
             try {
                 $query = "SELECT * 
                     FROM voto 

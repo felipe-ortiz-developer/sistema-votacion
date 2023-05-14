@@ -3,6 +3,7 @@
 h2 {
   font-size: 15vmin;
   position: absolute;
+  font-weight: bold;
 }
 
 .border {
@@ -15,7 +16,7 @@ h2 {
 }
 
 .wave {
-  color: rgb(0, 69, 133);
+  color: rgb(50, 140, 224);
   animation: wave 3s ease-in-out infinite;
 }
 

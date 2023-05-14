@@ -24,7 +24,6 @@
             $this->datos['regiones'] = $this->regionModel->obtenerRegiones();
             $this->datos['comunas'] = $this->comunaModel->obtenerComunas();
             $this->datos['candidatos'] = $this->candidatoModel->obtenerCandidatos();
-            // $this->datos['regiones'] = 
             return $this->datos;
         }
 

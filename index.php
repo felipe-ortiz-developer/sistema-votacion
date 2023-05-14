@@ -19,9 +19,6 @@
 </head>
 
 <body>
-    <h2 style="display:none" class="border">wavy</h2>
-    <h2 style="display:none" class="wave">wavy</h2>
-
     <h1 class="tituloMagico">
         <span class="textoMagico" style="--start-color:#007CF0; --end-color:#00DFD8; --content: 'Formulario';">
             Formulario
@@ -154,7 +151,7 @@
 
     </div>
 
-    <div style="text-align:center; margin-top: 0px">
+    <div style="text-align:center; margin-top: 32px">
         <button class="botonMagico" onclick="votar()">
             Votar
         </button>
@@ -164,6 +161,7 @@
     <script src="js/jquery.rut.js"></script>
     <script src="js/sweetAlert.js"></script>
     <script src="js/boostrap/bootstrap.min.js"></script>
+    <script src="js/confeti.js"></script>
 
     <script>
         let comunas = <?php print json_encode($index->datos["comunas"]); ?>;
@@ -258,6 +256,7 @@
             // }
 
             let miForm = {
+                accion: 'store',
                 nombre: $('#nombre').val(),
                 alias: $('#alias').val(),
                 rut: $('#rut').val(),
@@ -276,6 +275,11 @@
                 url: "./controllers/VotarController.php",
                 data: miForm,
                 success: function(data) {
+                    confetti({
+                        particleCount: 100,
+                        spread: 70,
+                        origin: { y: 0.6 },
+                    });
                     // alert(data);
                     Swal.fire({
                         // position: 'top-end',

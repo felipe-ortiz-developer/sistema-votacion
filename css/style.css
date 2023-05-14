@@ -1,7 +1,7 @@
 body {
     background: #000;
     font-family: system-ui;
-    display: grid;
+    /* display: grid; */
     place-content: center;
     height: 100vh;
     color: black;
@@ -12,7 +12,9 @@ body {
 }
 
 .jumbotron {
+    margin: 0 auto;
     background-color: white;
+    width: 600px;
 }
 
 .row {
