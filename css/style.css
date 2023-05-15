@@ -28,3 +28,8 @@ body {
 .labelCheck {
     margin-right: 11px;
 }
+
+.error {
+    color: red;
+    padding-left: 7px;
+}
