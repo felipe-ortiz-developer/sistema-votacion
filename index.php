@@ -33,126 +33,127 @@
 
     <div class="container">
         <div class="jumbotron">
-            <div class="row">
-                <div class="col">
-                    <label for="" class="columna">Nombre y Apellido</label>
+            <form id="myform">
+                <div class="row">
+                    <div class="col">
+                        <label for="" class="columna">Nombre y Apellido</label>
+                    </div>
+                    <div class="col">
+                        <input type="text" name="nombre" id="nombre" class="form-control" placeholder="ej: Felipe Ortiz">
+                    </div>
+                    <!-- <div class="col">
+                        <label class="labelError" for="" id="errorNombre"></label>
+                    </div> -->
                 </div>
-                <div class="col">
-                    <input type="text" id="nombre" class="form-control" placeholder="ej: Felipe Ortiz">
+                <div class="row">
+                    <div class="col">
+                        <label for="" class="columna">Alias</label>
+                    </div>
+                    <div class="col">
+                        <input type="text" id="alias" class="form-control" placeholder="ej: Sr Felipe">
+                    </div>
+                    <!-- <div class="col">
+                        <label class="labelError" for="" id="errorAlias"></label>
+                    </div> -->
                 </div>
-                <!-- <div class="col">
-                    <label class="labelError" for="" id="errorNombre"></label>
-                </div> -->
-            </div>
-            <div class="row">
-                <div class="col">
-                    <label for="" class="columna">Alias</label>
+                <div class="row">
+                    <div class="col">
+                        <label for="" class="columna">RUT</label>
+                    </div>
+                    <div class="col">
+                        <input type="text" id="rut" class="form-control" placeholder="ej: 18605707-4">
+                    </div>
+                    <!-- <div class="col">
+                        <label class="labelError" for="" id="errorRut"></label>
+                    </div> -->
                 </div>
-                <div class="col">
-                    <input type="text" id="alias" class="form-control" placeholder="ej: Sr Felipe">
+                <div class="row">
+                    <div class="col">
+                        <label for="" class="columna">Email</label>
+                    </div>
+                    <div class="col">
+                        <input type="text" name="email" id="email" class="form-control" placeholder="ej: felipe_ortiz@gmail.com">
+                    </div>
+                    <!-- <div class="col">
+                        <label class="labelError" for="" id="errorEmail"></label>
+                    </div> -->
                 </div>
-                <!-- <div class="col">
-                    <label class="labelError" for="" id="errorAlias"></label>
-                </div> -->
-            </div>
-            <div class="row">
-                <div class="col">
-                    <label for="" class="columna">RUT</label>
+                <div class="row">
+                    <div class="col">
+                        <label for="" class="columna">Región</label>
+                    </div>
+                    <div class="col">
+                        <select class="form-control" id="selectRegion">
+                            <option disabled selected value="">Seleccione una región</option>
+                            <?php
+                            foreach ($index->datos["regiones"] as $region) {
+                                print "<option value='" . $region['id'] . "'>" . $region['nombre'] . "</option>";
+                            }
+                            ?>
+                        </select>
+                    </div>
+                    <!-- <div class="col">
+                        <label class="labelError" for="" id="errorRut"></label>
+                    </div> -->
                 </div>
-                <div class="col">
-                    <input type="text" id="rut" class="form-control" placeholder="ej: 18605707-4">
+                <div class="row">
+                    <div class="col">
+                        <label for="" class="columna">Comuna</label>
+                    </div>
+                    <div class="col">
+                        <select class="form-control" id="selectComuna">
+                            <option disabled selected value="">Seleccione una comuna</option>
+                        </select>
+                    </div>
+                    <!-- <div class="col">
+                        <label class="labelError" for="" id="errorRut"></label>
+                    </div> -->
                 </div>
-                <!-- <div class="col">
-                    <label class="labelError" for="" id="errorRut"></label>
-                </div> -->
-            </div>
-            <div class="row">
-                <div class="col">
-                    <label for="" class="columna">Email</label>
+                <div class="row">
+                    <div class="col">
+                        <label for="" class="columna">Candidato</label>
+                    </div>
+                    <div class="col">
+                        <select class="form-control" id="selectCandidato">
+                            <option disabled selected value="">Seleccione un candidato</option>
+                            <?php
+                            foreach ($index->datos["candidatos"] as $candidato) {
+                                print "<option value='" . $candidato['id'] . "'>" . $candidato['nombre'] . "</option>";
+                            }
+                            ?>
+                        </select>
+                    </div>
+                    <!-- <div class="col">
+                        <label class="labelError" for="" id="errorRut"></label>
+                    </div> -->
                 </div>
-                <div class="col">
-                    <input type="text" id="email" class="form-control" placeholder="ej: felipe_ortiz@gmail.com">
-                </div>
-                <!-- <div class="col">
-                    <label class="labelError" for="" id="errorEmail"></label>
-                </div> -->
-            </div>
-            <div class="row">
-                <div class="col">
-                    <label for="" class="columna">Región</label>
-                </div>
-                <div class="col">
-                    <select class="form-control" id="selectRegion">
-                        <option disabled selected value="">Seleccione una región</option>
-                        <?php
-                        foreach ($index->datos["regiones"] as $region) {
-                            print "<option value='" . $region['id'] . "'>" . $region['nombre'] . "</option>";
-                        }
-                        ?>
-                    </select>
-                </div>
-                <!-- <div class="col">
-                    <label class="labelError" for="" id="errorRut"></label>
-                </div> -->
-            </div>
-            <div class="row">
-                <div class="col">
-                    <label for="" class="columna">Comuna</label>
-                </div>
-                <div class="col">
-                    <select class="form-control" id="selectComuna">
-                        <option disabled selected value="">Seleccione una comuna</option>
-                    </select>
-                </div>
-                <!-- <div class="col">
-                    <label class="labelError" for="" id="errorRut"></label>
-                </div> -->
-            </div>
-            <div class="row">
-                <div class="col">
-                    <label for="" class="columna">Candidato</label>
-                </div>
-                <div class="col">
-                    <select class="form-control" id="selectCandidato">
-                        <option disabled selected value="">Seleccione un candidato</option>
-                        <?php
-                        foreach ($index->datos["candidatos"] as $candidato) {
-                            print "<option value='" . $candidato['id'] . "'>" . $candidato['nombre'] . "</option>";
-                        }
-                        ?>
-                    </select>
-                </div>
-                <!-- <div class="col">
-                    <label class="labelError" for="" id="errorRut"></label>
-                </div> -->
-            </div>
-            <div class="row">
-                <div class="col">
-                    <label for="" class="columna">Como se enteró de nosotros</label>
-                </div>
-                <div class="col">
-                    <label class="labelCheck"><input type="checkbox" id="cboxWeb"> Web</label>
-                    <label class="labelCheck"><input type="checkbox" id="cboxTV"> TV</label><br>
-                    <label class="labelCheck"><input type="checkbox" id="cboxRS"> Redes sociales</label>
-                    <label class="labelCheck"><input type="checkbox" id="cboxA"> Amigo</label>
-                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="" class="columna">Como se enteró de nosotros</label>
+                    </div>
+                    <div class="col">
+                        <label class="labelCheck"><input type="checkbox" id="cboxWeb"> Web</label>
+                        <label class="labelCheck"><input type="checkbox" id="cboxTV"> TV</label><br>
+                        <label class="labelCheck"><input type="checkbox" id="cboxRS"> Redes sociales</label>
+                        <label class="labelCheck"><input type="checkbox" id="cboxA"> Amigo</label>
+                    </div>
 
-                <!-- <div class="col">
-                    <label class="labelError" for="" id="errorRut"></label>
-                </div> -->
-            </div>
-            <!-- <div class="row">
-                <div class="col">
-                    <label class="labelError" for="" id="errorVoto"></label>
+                    <!-- <div class="col">
+                        <label class="labelError" for="" id="errorRut"></label>
+                    </div> -->
                 </div>
-            </div> -->
-
+                <!-- <div class="row">
+                    <div class="col">
+                        <label class="labelError" for="" id="errorVoto"></label>
+                    </div>
+                </div> -->
+            </form>
         </div>
 
     </div>
 
     <div style="text-align:center; margin-top: 32px; margin-bottom: 32px">
-        <button class="botonMagico" onclick="votar()">
+        <button class="botonMagico">
             Votar
         </button>
     </div>
@@ -162,11 +163,46 @@
     <script src="js/sweetAlert.js"></script>
     <script src="js/boostrap/bootstrap.min.js"></script>
     <script src="js/confeti.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
 
     <script>
         let comunas = <?php print json_encode($index->datos["comunas"]); ?>;
 
         $(function() {
+            $('#myform').validate({ // initialize plugin
+                rules: {
+                    nombre: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    }
+                    },
+                    messages: {
+                    nombre: "Please enter your name",
+                    email: {
+                        required: "Please enter your email",
+                        email: "Please enter a valid email address"
+                    }
+                    },
+                    submitHandler: function(form) {
+                    $.ajax({
+                        url: "submit.php",
+                        type: "POST",
+                        data: $(form).serialize(),
+                        success: function(response) {
+                        alert("Form submitted successfully!");
+                        },
+                        error: function(xhr, status, error) {
+                        alert("An error occurred while submitting the form: " + error);
+                        }
+                    });
+                }
+            });
+
+            $('.botonMagico').on('click', function() {
+                $('#myform').submit();
+            });
+
             let region = $('#selectRegion').val();
             if (region !== null) {
                 dibujarOpcionesComunas(region);
