@@ -9,19 +9,17 @@
     <link href="../css/boostrap/bootstrap.min.css" rel="stylesheet"/>
     <link rel="icon" href="../img/votar.png">
     <link rel="stylesheet" href="../css/olas.css">
+    <link rel="stylesheet" href="../css/dataTableCustome.css">
     <style>
         body {
             background-color: black;
         }
-        .card {
-    overflow: auto;
-  }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="card mt-4">
-            <div style="padding-bottom: 170px; padding-left: 30px;">
+            <div style="padding-bottom: 120px; padding-left: 30px;">
                 <h2 class="border">Votos</h2>
                 <h2 class="wave">Votos</h2>
             </div>
@@ -46,6 +44,8 @@
                     <tbody>
                     </tbody>
                 </table>
+
+                <div style="width: 800px;"><canvas id="acquisitions"></canvas></div>
             </div>
         </div>
         
@@ -54,9 +54,36 @@
     <script src="../js/jquery-3.6.4.min.js"></script>
     <script src="../js/datatables.min.js"></script>
     <script src="../js/boostrap/bootstrap.min.js"></script>
+    <script src="../js/chart.js"></script>
     <script>
 
         $(function() {
+            const data = [
+                { year: 2010, count: 10 },
+                { year: 2011, count: 20 },
+                { year: 2012, count: 15 },
+                { year: 2013, count: 25 },
+                { year: 2014, count: 22 },
+                { year: 2015, count: 30 },
+                { year: 2016, count: 28 },
+            ];
+
+            new Chart(
+                document.getElementById('acquisitions'),
+                {
+                type: 'bar',
+                data: {
+                    labels: data.map(row => row.year),
+                    datasets: [
+                        {
+                            label: 'Acquisitions by year',
+                            data: data.map(row => row.count)
+                        }
+                    ]
+                }
+                }
+            );
+
             var table = $('#myDataTable').DataTable({
                 columns: [
                     { data: 'id' },
@@ -108,6 +135,7 @@
                 data: miForm,
                 dataType: 'json',
                 success: function(data) {
+                    console.log(data);
                     table.clear().rows.add(data).draw();
                 }
             });

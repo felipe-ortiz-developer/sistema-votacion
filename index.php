@@ -151,7 +151,7 @@
 
     </div>
 
-    <div style="text-align:center; margin-top: 32px">
+    <div style="text-align:center; margin-top: 32px; margin-bottom: 32px">
         <button class="botonMagico" onclick="votar()">
             Votar
         </button>

@@ -8,9 +8,35 @@
         }
 
         function listar(){
-            $stm = $this->conexion->query("SELECT * FROM voto");
-            $votos = $stm->fetchAll(PDO::FETCH_ASSOC);
-            return $votos;
+            try {
+                $query = "SELECT 
+                    vo.id, 
+                    vo.nombre, 
+                    vo.alias, 
+                    vo.rut, 
+                    vo.email, 
+                    ca.nombre as candidato,
+                    co.nombre as comuna,
+                    re.nombre as region,
+                    IF (vo.ref_web = 1, 'Si', 'No') as ref_web,
+                    IF (vo.ref_tv = 1, 'Si', 'No') as ref_tv,
+                    IF (vo.ref_redes_sociales = 1, 'Si', 'No') as ref_redes_sociales,
+                    IF (vo.ref_amigo = 1, 'Si', 'No') as ref_amigo
+                    FROM voto vo 
+                    INNER JOIN candidato ca
+                        ON vo.candidato_id = ca.id
+                    INNER JOIN comuna co
+                        ON vo.comuna_id = co.id
+                    INNER JOIN region re
+                        ON co.region_id = re.id";
+                $stm = $this->conexion->prepare($query);
+                $stm->execute();
+
+                $votos = $stm->fetchAll(PDO::FETCH_ASSOC);
+                return $votos;
+            } catch(PDOException $e) {
+                print "Error!: " . $e->getMessage() . "</br>";
+            }
         }
 
         function crear($datos){
@@ -46,7 +72,7 @@
                 $this->conexion->commit();
                 return $id;
 
-            } catch( PDOExecption $e ) {
+            } catch( PDOException $e ) {
                 print "Error!: " . $e->getMessage() . "</br>";
             }
         }
@@ -66,7 +92,7 @@
                     echo "Error en la consulta";
                 }
 
-            } catch( PDOExecption $e ) {
+            } catch( PDOException $e ) {
                 print "Error!: " . $e->getMessage() . "</br>";
             }
         }
