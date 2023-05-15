@@ -1,4 +1,5 @@
 ## Sistema de Votación ##
+Proyecto de muestra y prueba de conceptos de PHP, JS y CSS
 
 ![imagen](https://github.com/felipe-ortiz-developer/sistema-votacion/assets/32887258/67895ed0-8ebd-4c94-b588-bda75cfe73e0)
 
