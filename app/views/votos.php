@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listar votos</title>
-    <link href="../css/datatables.min.css" rel="stylesheet"/>
-    <link href="../css/boostrap/bootstrap.min.css" rel="stylesheet"/>
-    <link rel="icon" href="../img/votar.png">
-    <link rel="stylesheet" href="../css/olas.css">
-    <link rel="stylesheet" href="../css/dataTableCustome.css">
+    <link href="../../public/css/datatables.min.css" rel="stylesheet"/>
+    <link href="../../public/css/boostrap/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="icon" href="../../public/img/votar.png">
+    <link rel="stylesheet" href="../../public/css/olas.css">
+    <link rel="stylesheet" href="../../public/css/dataTableCustome.css">
     <style>
         body {
             background-color: black;
@@ -51,10 +51,10 @@
         
     </div>
     
-    <script src="../js/jquery-3.6.4.min.js"></script>
-    <script src="../js/datatables.min.js"></script>
-    <script src="../js/boostrap/bootstrap.min.js"></script>
-    <script src="../js/chart.js"></script>
+    <script src="../../public/js/jquery-3.6.4.min.js"></script>
+    <script src="../../public/js/datatables.min.js"></script>
+    <script src="../../public/js/boostrap/bootstrap.min.js"></script>
+    <script src="../../public/js/chart.js"></script>
     <script>
 
         $(function() {

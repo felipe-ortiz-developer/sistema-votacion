@@ -96,7 +96,7 @@
 
                     $.ajax({
                         type: "POST",
-                        url: "./controllers/VotarController.php",
+                        url: "./app/controllers/VotarController.php",
                         data: miForm,
                         success: function(data) {
                             confetti({

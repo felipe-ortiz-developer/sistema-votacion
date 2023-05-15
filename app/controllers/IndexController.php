@@ -3,9 +3,9 @@
     error_reporting(E_ALL);
     ini_set('error_reporting', E_ALL);
 
-    include "./models/Region.php";
-    include "./models/Comuna.php";
-    include "./models/Candidato.php";
+    include "app/models/Region.php";
+    include "app/models/Comuna.php";
+    include "app/models/Candidato.php";
     
     class Index {
         public $datos;

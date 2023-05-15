@@ -1,5 +1,5 @@
 <?php
-    require_once 'controllers/IndexController.php';
+    require_once 'app/controllers/IndexController.php';
     $index = new Index();
 ?>
 <!DOCTYPE html>
@@ -10,12 +10,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Sistema de votación</title>
-    <link href="css/boostrap/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/tituloMagico.css">
-    <link rel="stylesheet" href="css/botonMagico.css">
-    <link rel="stylesheet" href="css/olas.css">
-    <link rel="icon" href="img/votar.png">
+    <link href="public/css/boostrap/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/tituloMagico.css">
+    <link rel="stylesheet" href="public/css/botonMagico.css">
+    <link rel="stylesheet" href="public/css/olas.css">
+    <link rel="icon" href="public/img/votar.png">
 </head>
 
 <body>
@@ -135,18 +135,18 @@
         </button>
     </div>
 
-    <script src="js/jquery-3.6.4.min.js"></script>
-    <script src="js/jquery.rut.js"></script>
-    <script src="js/sweetAlert.js"></script>
-    <script src="js/boostrap/bootstrap.min.js"></script>
-    <script src="js/confeti.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
+    <script src="public/js/jquery-3.6.4.min.js"></script>
+    <script src="public/js/jquery.rut.js"></script>
+    <script src="public/js/sweetAlert.js"></script>
+    <script src="public/js/boostrap/bootstrap.min.js"></script>
+    <script src="public/js/confeti.js"></script>
+    <script src="public/js/jquery.validate.min.js"></script>
 
     <script>
         let comunas = <?php print json_encode($index->datos["comunas"]); ?>;
     </script>
 
-    <script src="js/validacion.js"></script>
+    <script src="public/js/validacion.js"></script>
 </body>
 
 </html>
