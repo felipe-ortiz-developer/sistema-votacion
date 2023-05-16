@@ -56,34 +56,7 @@
     <script src="../../public/js/boostrap/bootstrap.min.js"></script>
     <script src="../../public/js/chart.js"></script>
     <script>
-
         $(function() {
-            const data = [
-                { year: 2010, count: 10 },
-                { year: 2011, count: 20 },
-                { year: 2012, count: 15 },
-                { year: 2013, count: 25 },
-                { year: 2014, count: 22 },
-                { year: 2015, count: 30 },
-                { year: 2016, count: 28 },
-            ];
-
-            new Chart(
-                document.getElementById('acquisitions'),
-                {
-                type: 'bar',
-                data: {
-                    labels: data.map(row => row.year),
-                    datasets: [
-                        {
-                            label: 'Acquisitions by year',
-                            data: data.map(row => row.count)
-                        }
-                    ]
-                }
-                }
-            );
-
             var table = $('#myDataTable').DataTable({
                 columns: [
                     { data: 'id' },
@@ -135,14 +108,58 @@
                 data: miForm,
                 dataType: 'json',
                 success: function(data) {
-                    console.log(data);
+                    // console.log(data);
                     table.clear().rows.add(data).draw();
+                    armarGrafico(data)
                 }
             });
         });
 
-        function listar(){
-            
+        // function listar(){
+        // }
+
+        function armarGrafico(votos){
+            // console.log("votos: ");
+            // console.log(votos);
+
+            var candidatos = [];
+            votos.reduce(function(acumulador, voto) {
+                if (!candidatos.includes(voto.candidato)) {
+                    candidatos.push(voto.candidato);
+                }
+            }, candidatos);
+            // console.log(candidatos); // Todos los candidatos (no repetidos)
+
+            var votosPorCandidato = [];
+            for (let i = 0; i < candidatos.length; i++) {
+                let candidato = {
+                    nombre: candidatos[i],
+                    conteo: 0
+                }
+                for (let i = 0; i < votos.length; i++) {
+                    if (votos[i].candidato == candidato.nombre) {
+                        candidato.conteo++;
+                    }
+                }
+                votosPorCandidato.push(candidato);
+            }
+            // console.log(votosPorCandidato); // Array de candidatos con sus votos
+
+            new Chart(
+                $('#acquisitions'), 
+                {
+                    type: 'bar',
+                    data: {
+                        labels: votosPorCandidato.map(row => row.nombre),
+                        datasets: [
+                            {
+                                label: 'Votos',
+                                data: votosPorCandidato.map(row => row.conteo)
+                            }
+                        ]
+                    }
+                }
+            );
         }
     </script>
 </body>
