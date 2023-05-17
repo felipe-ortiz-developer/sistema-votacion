@@ -1,8 +1,30 @@
 ## Sistema de Votación ##
 Proyecto de muestra y prueba de conceptos de PHP, JS y CSS
+PHP: 
+    - Estructura MVC
+    - Conexion con base de datos mysql
+    - CRUD de entidades
+    - Sistema de login
+    - 
+ JS: 
+    - Muestra de registros en tabla con DataTable
+    - Muestra de registros en graficos con chart.js
+    - Alertas esteticas con SweetAlert
+    - Efecto visual con confeti.js
+    - Validación con Jquery Validation
+ CSS:
+    - Efecto visual de titulo que cambia de color
+    - Efecto visual de boton de votar que cambia de color como "magico"
+    - 
 
 ![imagen](https://github.com/felipe-ortiz-developer/sistema-votacion/assets/32887258/67895ed0-8ebd-4c94-b588-bda75cfe73e0)
 
+## Tecnologías : ##
+    - Apache 2.4.54
+    - MySQL 8.0.31
+    - PHP 7.4.33
+    - JQuery
+    
 #### Instalación: #### 
     1. Instalar stack de tecnologias web "WAMP"
         ref: https://www.wampserver.com/en/
@@ -28,8 +50,3 @@ Proyecto de muestra y prueba de conceptos de PHP, JS y CSS
                     private $servidor = "localhost";
                     private $basededatos = "sistema_votacion";
 
-## Tecnologías : ##
-    - Apache 2.4.54
-    - MySQL 8.0.31
-    - PHP 7.4.33
-    - JQuery
