@@ -1,8 +1,8 @@
 <?php 
-    if($_SERVER['PHP_SELF'] == '/app/controllers/VotarController.php'){
-        include '../../database.php';
-    }else{
+    if($_SERVER['PHP_SELF'] == '/index.php'){
         include './database.php';
+    }else{
+        include '../../database.php';
     }
 
     class Conexion{
