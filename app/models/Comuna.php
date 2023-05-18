@@ -1,7 +1,7 @@
 <?php 
-    require_once "Database.php";
+    require_once "Conexion.php";
 
-    class Comuna extends Database {
+    class Comuna extends Conexion {
 
         function __construct(){
             parent::__construct();
