@@ -24,7 +24,7 @@ Proyecto de muestra y prueba de conceptos de PHP, JS y CSS
                     private $contraseña = "";
                     private $servidor = "localhost";
                     private $basededatos = "sistema_votacion";
-            3. Quitar la extencion "".example" el nombre del archivo
+            3. Quitar la extencion ".example" el nombre del archivo
 
 ## Tecnologías : ##
     - Apache 2.4.54
