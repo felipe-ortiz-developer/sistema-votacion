@@ -15,7 +15,7 @@ Proyecto de muestra y prueba de conceptos de PHP, JS y CSS
             1. Seleccionada la base de datos ingresar a la pestaña "Importar"
             2. Archivo a importar -> Examinar y seleccionar dentro del proyecto "SQL/sistema_votacion.sql"
             3. Pinchar boton Importar
-    3. Configurar archivo de conexion a la base de datos
+    3. Configurar archivo de variables globales a la base de datos
         Pasos: 
             1. Abrir archivo "database.php.example"
             2. Configurar variables de conexion deacuerdo a sus necesidades
