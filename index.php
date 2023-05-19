@@ -16,6 +16,14 @@
     <link rel="stylesheet" href="public/css/botonMagico.css">
     <link rel="stylesheet" href="public/css/olas.css">
     <link rel="icon" href="public/img/votar.png">
+    <style>
+        .button-corner {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            margin: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,6 +38,10 @@
             Votación
         </span>
     </h1>
+
+    <div class="button-corner">
+        <a class="btn btn-outline-primary" href="http://votacion.test/app/views/auth/login.php">Iniciar sesión</a>
+    </div>
 
     <div class="container">
         <div class="jumbotron">
