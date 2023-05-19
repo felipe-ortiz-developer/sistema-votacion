@@ -1,16 +1,28 @@
 # Sistema de Votación
-Esta es una aplicación de votación de muestra y prueba de conceptos desarrollado en PHP7, jQuery y MySQL.
+Esta es una aplicación de votación de candidatos con la finalidad de mostrar y probar conceptos desarrollados en PHP7, jQuery y MySQL.
 
 ### Funcionalidades
-
     Registro de usuarios: Los usuarios pueden crear cuentas para acceder a la aplicación.
     Inicio de sesión: Los usuarios pueden iniciar sesión con sus credenciales registradas.
     Agregar candidatos: Las votaciones se organizan en diferentes categorías.
-    Emitir votos: Los usuarios pueden emitir votos en las categorías disponibles.
+    Emitir votos: Los usuarios pueden emitir votos en los candidatos.
     Resultados de votación: Se muestra un resumen de los resultados de las votaciones en graficos y registros en tabla.
+    
+### Caracteristicas
+    Titulo que cambia de color: Efecto CSS para titulos
+    "Boton magico" efecto de colores por detras: Efecto CSS para botones
+    Alertas visualmente esteticos: Libreria de SweetAlert.js
+    Lanza Confeti al completar la votación: Libreria de confeti.js
+    Registros y graficos de la votación: chart.js y datable.js
 
 ![imagen](https://github.com/felipe-ortiz-developer/sistema-votacion/assets/32887258/67895ed0-8ebd-4c94-b588-bda75cfe73e0)
 
+### Requisitos previos :
+    - Apache 2.4.54
+    - MySQL 8.0.31
+    - PHP 7.4.33
+    - JQuery
+    
 ### Instalación:
     1. Crear base de datos
         Pasos: 
@@ -34,12 +46,6 @@ Esta es una aplicación de votación de muestra y prueba de conceptos desarrolla
                     define('DB_PASS', 'tu_contraseña');
                     define('DB_NAME', 'sistema_votacion');
             3. Quitar la extencion ".example" el nombre del archivo
-
-### Requisitos previos :
-    - Apache 2.4.54
-    - MySQL 8.0.31
-    - PHP 7.4.33
-    - JQuery
 
 ### Contribuciones
 
